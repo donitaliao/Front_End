@@ -1,127 +1,143 @@
 body {
     font-family:Noto Sans, sans-serif, serif;
+    color: #404040;
 }
 h1 {
     font-size: 46px;
     font-weight: normal;
-    margin: 50px 0 6px 50px;
+    padding: 50px 0 2px 50px;
+    margin: 0;
 }
 h2 {
     font-size: 46px;
     font-weight: normal;
-    margin: 46px 0 6px 50px;
+    padding: 46px 0 6px 50px;
+    margin: 0;
+}
+.parent {
+    position: relative;
+    height: auto;
 }
 .avator {
     padding: 30px 0px 0px 50px;
+    position: absolute;
+    height: 150px;
+    width: 150px;
+}
+.overview {
     position: relative;
+    padding: 30px 120px 0 230px;
 }
 .name {
     font-size: 46px;
-    padding: 0 0 0 225px;
-    position: relative;
-}
-.overview {
-    color: #404040;
-    margin-left: 230px;
-    margin-right: 350px;
+    line-height: 80%;
 }
 .wording{
-    margin-top: 10px;
+    padding-top: 10px;
+    line-height: 135%;
 }
 .tel {
-    margin-top: 6px;
+    padding-top: 6px;
 }
-.bricks {
+.blocks {
     display: flex;
     flex-wrap: wrap;
 }
-.bricks .column {
+.blocks .column {
     width: calc((100% - 200px) / 2);
-    margin: 0 25px 0 0;
+    padding: 0 25px 0 0;
 }
-.bricks .column h2 {
-    font-weight: normal;
-    margin-bottom: 10px;
+.column_content {
+    padding: 10px 0 0 50px; 
 }
-.bricks .column p {
-    margin: 0 0 0 50px;
+.column p {
+    padding-right: 6px;
+    margin: 0;
+    line-height: 135%;
+}
+.column span {
+    line-height: 135%;
 }
 .column .language {
     display: flex;
-}
-.language p {
-    padding-right: 6px;
 }
 .column .languagegroup {
     display: flex;
     flex-direction: column;
 }
-.bricks h2 {
-    font-weight: normal;
-    padding: 0;
-    margin: 46px 0 0 50px;
+.blocks h2 {
+    padding: 46px 0 0 50px;
     width: 100%;
 }
-.bricks .brick {
+.blocks .block {
     margin: 0;
     width: calc((100% - 20px)/ 4);
 }
-.bricks .brick:nth-child(n+1) {
-    margin: 0 10px 0 50px;
+.blocks .block:nth-child(n+1) {
+    padding: 0 10px 0 50px;
 }
-.brick h3 {
+.block h3 {
     font-size: 30px;
     font-weight: lighter;
-    padding-top: 2px;
-    margin-bottom: 14px;
+    padding-top: 10px;
     border-top: 6px solid #999999;
+    margin: 6px 0 0 0;
 }
-.brick p {
-    margin: 0;
-    padding: 0;
+.block p {
+    line-height: 135%;
+    padding-top: 6px;
 }
-.horizontal_tools {
+.all_tools {
+    overflow: auto;
+}
+.tool_group {
     float: left;
-    margin-right: 50px;
 }
-.tools_function {
-    padding: 0px 20px 0px 50px;
-    text-align: left;
+.tool_group p {
+    padding: 0 20px 0 50px;
 }
-.tools_item {
-    padding-left: 90px;
+.tool_group ul {
+    padding: 0 0 0 90px;
     font-style: italic;
-    margin-top: 5px;
 }
-.horizontal_tools_right {
-    padding: 1px 0px 0px 0px;
-    margin: 0px 0px 0px 500px;
+.clearfix:after { 
+    content: ""; display: block; clear: both;
 }
 .experience {
-    border-left: 1px solid #999999;
-    width: 98%;
+    display: flex;
+    padding-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.experience_leftside {
+    width: 1px;
+    height: auto;
+    border-right: 1px solid #999999;
+    flex-direction: column; 
+}
+.experience_content {
     margin-left: 50px;
+    width: calc(100% - 12%);
+    line-height: 135%;
 }
 .company {
     font-size: 24px;
     margin: 0;
-    padding: 20px 0px 0px 50px;
+    padding: 20px 0 0 0;
 }
 .jobtitle {
     font-size: 18px;
     font-weight: bold;
     font-style: italic;
-    margin: 10px 0px 8px 0px;
-    padding-left: 50px;
+    margin: 10px 0 8px 0;
 }
 .jbcategory {
-    padding: 0px 0px 0px 50px;
-    margin: 0;
+    /*margin: 0;*/
 }
 .jbd {
     width: 68%;
     margin-top: 4px;
-    padding-left: 90px;
+    padding-left: 40px;
 }
 a:link {
     color: #009933;
