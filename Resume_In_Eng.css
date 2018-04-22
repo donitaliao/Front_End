@@ -5,32 +5,36 @@ body {
 h1 {
     font-size: 46px;
     font-weight: normal;
-    padding: 50px 0 2px 50px;
+    padding: 50px 0 2px 0;
     margin: 0;
 }
 h2 {
     font-size: 46px;
     font-weight: normal;
-    padding: 46px 0 6px 50px;
+    padding: 46px 0 6px 0;
     margin: 0;
 }
-.parent {
+.container {
+    height: auto;
+    padding-left: 100px;
+}
+.header_parent {
     position: relative;
     height: auto;
 }
 .avator {
-    padding: 30px 0px 0px 50px;
+    padding: 30px 0 0 0;
     position: absolute;
     height: 150px;
     width: 150px;
 }
 .overview {
     position: relative;
-    padding: 30px 120px 0 230px;
+    padding: 30px 120px 0 170px;
 }
-.name {
-    font-size: 46px;
+.name h2 {
     line-height: 80%;
+    padding: 0 0 6px 0;
 }
 .wording{
     padding-top: 10px;
@@ -44,11 +48,11 @@ h2 {
     flex-wrap: wrap;
 }
 .blocks .column {
-    width: calc((100% - 200px) / 2);
+    width: 40%;
     padding: 0 25px 0 0;
 }
 .column_content {
-    padding: 10px 0 0 50px; 
+    padding: 10px 0 0 0; 
 }
 .column p {
     padding-right: 6px;
@@ -66,20 +70,20 @@ h2 {
     flex-direction: column;
 }
 .blocks h2 {
-    padding: 46px 0 0 50px;
+    padding: 46px 0 0 0;
     width: 100%;
 }
 .blocks .block {
     margin: 0;
-    width: calc((100% - 20px)/ 4);
+    width: 25%;
 }
 .blocks .block:nth-child(n+1) {
-    padding: 0 10px 0 50px;
+    padding: 0 10px 0 0;
 }
 .block h3 {
     font-size: 30px;
     font-weight: lighter;
-    padding-top: 10px;
+    padding: 10px 0 0 0;
     border-top: 6px solid #999999;
     margin: 6px 0 0 0;
 }
@@ -94,31 +98,20 @@ h2 {
     float: left;
 }
 .tool_group p {
-    padding: 0 20px 0 50px;
+    padding: 0 20px 0 0;
 }
 .tool_group ul {
-    padding: 0 0 0 90px;
+    padding: 0 0 0 40px;
     font-style: italic;
 }
 .clearfix:after { 
     content: ""; display: block; clear: both;
 }
 .experience {
-    display: flex;
+    border-left: 1px solid #999999;
+    width: 98%;
+    margin: 0;
     padding-left: 50px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.experience_leftside {
-    width: 1px;
-    height: auto;
-    border-right: 1px solid #999999;
-    flex-direction: column; 
-}
-.experience_content {
-    margin-left: 50px;
-    width: calc(100% - 12%);
-    line-height: 135%;
 }
 .company {
     font-size: 24px;
@@ -130,14 +123,17 @@ h2 {
     font-weight: bold;
     font-style: italic;
     margin: 10px 0 8px 0;
+    padding-left: 0;
 }
 .jbcategory {
-    /*margin: 0;*/
+    padding: 0;
+    margin: 0;
 }
 .jbd {
     width: 68%;
     margin-top: 4px;
-    padding-left: 40px;
+    padding-left: 46px;
+    line-height: 135%;
 }
 a:link {
     color: #009933;
@@ -147,4 +143,40 @@ a:visited {
     color: #009933;
     background-color: transparent;
     text-decoration: underline;
+}
+@media (min-width: 375px) and (max-width: 768px) {
+    .container {
+        width: 98%;
+        padding: 0 0 0 10px;
+    }
+    .overview {
+        width: 70%;
+        position: relative;
+        padding: 200px 0 0 0;
+    }
+    .blocks .column {
+        width: 98%;
+        margin: 0 16px 0 0;
+    }
+    .blocks .block {
+        width: 98%;
+    }
+    .blocks .block:nth-child(n+1) {
+        margin-right: 10%;
+    }
+    .all_tools {
+        width: 90%;
+    }
+    .experience {
+        width: 86%;
+    }
+    .company {
+        width: 77%;
+    }
+    .jobtitle {
+        width: 77%;
+    }
+    .jbd {
+        width: 77%;
+    }
 }
